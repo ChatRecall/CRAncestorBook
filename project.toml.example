@@ -1,0 +1,88 @@
+[book]
+title = "Full Name of Subject"
+subtitle = "Optional Subtitle"
+dates = "1900–1980"
+
+author = "Your Name"
+language = "en"
+date = "2026"
+
+publisher = "Family Archive or Publisher Name"
+rights_holder = "Your Name"
+rights_year = "2026"
+
+version = "0.2.0"
+
+[target]
+name = "Full Name of Subject"
+dob = "1900-01-01"  # Use ISO format if known; otherwise replace with a plain string
+dod = "1980-12-31"
+
+[paths]
+# Main working directory for this book project
+work_dir = "/path/to/your/book_project/"
+
+# Source directories containing plain text files
+primary_sources = "/path/to/your/sources_primary/"
+secondary_sources = "/path/to/your/sources_secondary/"
+official_sources = "/path/to/your/sources_official/"
+
+# Optional directories
+images = "/path/to/your/book_images/"
+chapter_appends = "/path/to/your/chapter_appends/"
+
+[book_materials]
+# Optional book assets
+cover = "/path/to/your/book_materials/cover.jpg"
+front_matter = "/path/to/your/book_materials/front_matter.md"
+back_matter = "/path/to/your/book_materials/back_matter.md"
+
+[sources]
+# Primary = subject's own voice (interviews, letters, diaries, memoirs, etc.)
+primary = [
+  "Sources/primary/interview_01.txt",
+  "Sources/primary/interview_02.txt",
+]
+
+# Secondary = material written about the subject
+secondary = [
+  "Sources/secondary/family_notes.txt",
+  "Sources/secondary/legacy_biography.txt",
+]
+
+# Official = published or attributable sources
+official = [
+  "Sources/official/obituary.txt",
+  "Sources/official/newspaper_article.txt",
+]
+
+[sources.policy]
+coverage = "primary+secondary"
+tone = "primary"
+
+[workspace]
+sync_mode = "update"  # "fresh" | "update" | "force" (future)
+
+[run]
+# Leave these commented out for first-time setup.
+# They are used after chapters exist.
+
+# Examples: "2", "3", "2-6"
+# steps = "2-6"
+
+# Examples: "all", "6", "4-8", "1,3,6"
+# chapters = "all"
+
+# Chapters are usually generated after the TOC step.
+[chapters]
+
+# Example generated structure after TOC creation:
+#
+# [chapters.1]
+# title = "Chapter Title"
+# time_range = "1900–1910"
+# append_md = "chapter_01_images.md"
+# examples = [
+#   "example item",
+#   "example item",
+# ]

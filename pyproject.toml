@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CRAncestorBook"
+version = "0.0.0"
+description = "Python program to write biographies"
+authors = [{ name = "David", email = "dave@chatrecall.com" }]
+requires-python = ">=3.13"
+dependencies = [
+    "requests>=2.31.0",
+    "tiktoken>=0.8.0",
+    "wrapai",
+    "wrapembed",
+    "wrapemit",
+]
+
+[tool.setuptools]
+packages = ["CRAncestorBook"]
+
+[tool.uv.sources]
+wrapemit = { path = "../../WrapLibraries/WrapUtils/WrapEmit", editable = true }
+wrapai = { path = "../../WrapLibraries/WrapAI/WrapAI", editable = true }
+wrapembed = { path = "../../WrapLibraries/WrapAI/WrapEmbed", editable = true }
+
