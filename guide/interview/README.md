@@ -1,5 +1,3 @@
-Correct — you didn’t. Here’s a clean one consistent with your other guides:
-
 ```markdown
 # Interview Guide
 
